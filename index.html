@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AMS Infosystems — IT & Healthcare Staffing and Solutions</title>
+<meta name="description" content="AMS Infosystems LLC provides IT staffing, healthcare staffing and medical coding professionals, and project-based IT solutions to employers across the USA. Contract, contract-to-hire and direct hire.">
+<meta name="theme-color" content="#0B1B4A">
+<link rel="canonical" href="https://amsinfosystems.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AMS Infosystems">
+<meta property="og:title" content="AMS Infosystems — IT & Healthcare Staffing and Solutions">
+<meta property="og:description" content="Vetted IT and healthcare professionals for contract, contract-to-hire and direct-hire roles across the USA.">
+<meta property="og:url" content="https://amsinfosystems.com/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=70">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232563EB'/%3E%3Cstop offset='1' stop-color='%230891B2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Cpath d='M12 51 27 13h8L20 51z' fill='%23fff'/%3E%3Cpath d='M52 51 37 13h-8l15 38z' fill='%23BAE6FD'/%3E%3Crect x='23' y='36' width='18' height='5' rx='2.500' fill='%230B1B4A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { navy: { DEFAULT: '#0B1B4A', 800: '#10286B', 700: '#173A8C' }, teal: { DEFAULT: '#2563EB', 600: '#1D4ED8', 50: '#EFF6FF' } },
+      fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] },
+      boxShadow: { soft: '0 10px 30px -12px rgba(15,42,68,.18)', lift: '0 24px 50px -20px rgba(15,42,68,.35)' }
+    }
+  }
+}
+</script>
+<style>
+  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #243447; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .img-fallback { background: linear-gradient(135deg, #173A8C, #2563EB); }
+  .hero-bg { background: radial-gradient(800px 480px at 90% -5%, rgba(59,130,246,.55), transparent 60%), radial-gradient(600px 400px at 0% 100%, rgba(29,78,216,.45), transparent 60%), linear-gradient(160deg, #0B1B4A 0%, #07123a 100%); }
+  .text-grad { background: linear-gradient(90deg, #93C5FD, #60A5FA 50%, #22D3EE); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .blob { position: absolute; border-radius: 9999px; filter: blur(70px); pointer-events: none; }
+  .glass { background: rgba(255,255,255,.14); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.28); }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .floaty { animation: floaty 6s ease-in-out infinite; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+  .marquee-track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  #services article, #industries .grid > div { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, opacity .7s ease; border: 1px solid rgba(37,99,235,.08); }
+  #services article:hover, #industries .grid > div:hover { transform: translateY(-8px); border-color: rgba(37,99,235,.4); }
+  #services article img { transition: transform .7s ease; }
+  #services article:hover img { transform: scale(1.07); }
+  .shine { position: relative; overflow: hidden; }
+  .shine::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 35%, rgba(255,255,255,.35) 50%, transparent 65%); transform: translateX(-120%); transition: transform .8s; }
+  .shine:hover::after { transform: translateX(120%); }
+  @media (prefers-reduced-motion: reduce) { .floaty, .marquee-track { animation: none; } }
+  .grid-dots { background-image: radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px); background-size: 22px 22px; }
+  .field { width: 100%; border: 1px solid #d5dde6; border-radius: 1rem; padding: .85rem 1.1rem; background: #F8FAFC; transition: border-color .15s, box-shadow .15s; }
+  .field:focus { outline: none; border-color: #2563EB; box-shadow: 0 0 0 3px rgba(37,99,235,.18); }
+  .field[aria-invalid="true"] { border-color: #dc2626; }
+  :focus-visible { outline: 3px solid #2563EB; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { .reveal { transition: none; opacity: 1; transform: none; } html { scroll-behavior: auto; } }
+  section[id] { scroll-margin-top: 80px; }
+</style>
+</head>
+<body class="bg-white antialiased">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="amsG" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#0891B2"/></linearGradient>
+    <symbol id="ams-logo" viewBox="0 0 48 48">
+      <rect width="48" height="48" rx="14" fill="url(#amsG)"/>
+      <path d="M0 14C18 12 34 24 48 24V0H0z" fill="#fff" opacity=".12"/>
+      <path d="M9 38 20.5 10H27L15.5 38z" fill="#fff"/>
+      <path d="M39 38 27.5 10H21l11.5 28z" fill="#BAE6FD"/>
+      <rect x="17.5" y="27" width="13" height="3.6" rx="1.8" fill="#0B1B4A" opacity=".85"/>
+      <circle cx="24" cy="9.5" r="2.6" fill="#fff"/>
+    </symbol>
+  </defs>
+</svg>
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:text-navy focus:px-4 focus:py-2 focus:rounded-lg">Skip to content</a>
+
+<!-- NAVBAR -->
+<header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 h-[72px] flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3" aria-label="AMS Infosystems home">
+      <svg class="w-11 h-11 drop-shadow-lg" aria-hidden="true"><use href="#ams-logo"/></svg>
+      <span id="logoText" class="leading-none text-white">
+        <span class="block text-xl font-extrabold tracking-tight">AMS</span>
+        <span class="block mt-1 text-[10px] font-bold uppercase tracking-[.22em] opacity-80">Infosystems</span>
+      </span>
+    </a>
+    <nav aria-label="Primary" class="hidden lg:block">
+      <ul id="navLinks" class="flex items-center gap-1 text-sm font-semibold">
+        <li><a class="nav-a px-3 py-2 rounded-lg" href="#home">Home</a></li>
+        <li><a class="nav-a px-3 py-2 rounded-lg" href="#services">Services</a></li>
+        <li><a class="nav-a px-3 py-2 rounded-lg" href="#industries">Industries</a></li>
+        <li><a class="nav-a px-3 py-2 rounded-lg" href="#about">About</a></li>
+        <li><a class="nav-a px-3 py-2 rounded-lg" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#contact" data-role="employer" class="hidden sm:inline-flex items-center shine rounded-full bg-gradient-to-r from-teal to-sky-500 hover:brightness-110 text-white text-sm font-bold px-5 py-2.5 shadow-soft transition">Request Talent</a>
+      <button id="menuBtn" class="lg:hidden grid place-items-center w-11 h-11 rounded-xl text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg id="iconOpen" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg id="iconClose" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-slate-100 shadow-lift">
+    <ul class="px-5 py-4 space-y-1 text-navy font-semibold">
+      <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#home">Home</a></li>
+      <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#services">Services</a></li>
+      <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#industries">Industries</a></li>
+      <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#about">About</a></li>
+      <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#contact">Contact</a></li>
+      <li class="pt-2"><a data-role="employer" class="block text-center rounded-xl bg-teal text-white font-bold px-5 py-3" href="#contact">Request Talent</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section id="home" class="hero-bg relative overflow-hidden text-white pt-[72px]">
+  <div class="grid-dots absolute inset-0 opacity-60" aria-hidden="true"></div>
+  <div class="blob w-72 h-72 bg-sky-400/20 -top-10 left-1/3" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 pt-16 pb-28 md:pt-24 md:pb-40 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7">
+      <p class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/15 px-4 py-1.5 text-xs font-bold tracking-wide uppercase text-teal-50">
+        <span class="w-2 h-2 rounded-full bg-teal" aria-hidden="true"></span> IT &amp; Healthcare Staffing
+      </p>
+      <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-tight">
+        The right tech and healthcare talent, <span class="text-grad">delivered fast.</span>
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg text-slate-200 leading-relaxed">
+        AMS Infosystems places vetted IT professionals and certified healthcare and medical coding specialists with hospitals, RCM companies, technology firms and enterprise employers. One accountable partner, from first requirement to first day on the job.
+      </p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3.5">
+        <a href="#contact" data-role="employer" class="shine inline-flex justify-center items-center rounded-full bg-gradient-to-r from-teal to-sky-500 hover:brightness-110 px-8 py-4 font-bold shadow-[0_14px_34px_-8px_rgba(37,99,235,.8)] transition">Request Talent
+          <svg class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <p class="mt-8 text-sm text-slate-300 font-medium">Serving clients across the USA &bull; Contract, contract-to-hire &amp; direct hire</p>
+    </div>
+    <div class="lg:col-span-5 relative">
+      <div class="relative rounded-3xl overflow-hidden shadow-lift ring-1 ring-white/15 aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5] img-fallback">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=75" alt="A diverse team collaborating around a table in a bright office" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" onerror="this.remove()">
+        <div class="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent"></div>
+      </div>
+      <div class="glass floaty hidden sm:block absolute -top-5 -right-3 lg:-right-6 rounded-2xl px-5 py-3.5 shadow-lift">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-sky-200">Engagement models</p>
+        <p class="mt-1 text-sm font-extrabold">Contract &bull; C2H &bull; Direct hire</p>
+      </div>
+      <div class="hidden sm:flex absolute -bottom-6 -left-6 bg-white text-navy rounded-2xl shadow-lift px-5 py-4 items-center gap-3">
+        <span class="grid place-items-center w-11 h-11 rounded-xl bg-teal-50 text-teal">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        </span>
+        <span><span class="block text-sm font-extrabold">Pre-vetted shortlists</span><span class="block text-xs text-slate-500">Screened before they reach you</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<section aria-label="At a glance" class="relative z-10 -mt-16 md:-mt-24 px-5 sm:px-8 pb-12 bg-gradient-to-b from-transparent via-transparent to-slate-50">
+  <div class="mx-auto max-w-7xl rounded-3xl bg-gradient-to-br from-teal to-navy-700 text-white shadow-lift px-8 py-9 grid grid-cols-2 lg:grid-cols-4 gap-y-7 gap-x-6 ring-1 ring-white/20">
+    <div class="text-center lg:text-left"><p class="text-3xl font-extrabold text-white">3</p><p class="mt-1 text-sm text-blue-100">Engagement models: contract, contract-to-hire, direct hire</p></div>
+    <div class="text-center lg:text-left"><p class="text-3xl font-extrabold text-white">2</p><p class="mt-1 text-sm text-blue-100">Specialty practices: IT and healthcare</p></div>
+    <div class="text-center lg:text-left"><p class="text-3xl font-extrabold text-white">USA</p><p class="mt-1 text-sm text-blue-100">Nationwide client and candidate coverage</p></div>
+    <div class="text-center lg:text-left"><p class="text-3xl font-extrabold text-white">1</p><p class="mt-1 text-sm text-blue-100">Dedicated point of contact for every client</p></div>
+  </div>
+</section>
+
+<!-- SKILLS TICKER -->
+<section aria-label="Skills and domains we place" class="bg-slate-50 pb-4">
+  <p class="text-center text-xs font-bold uppercase tracking-[.25em] text-slate-400">Skills and domains we place</p>
+  <div class="marquee mt-5 overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_12%,#000_88%,transparent)]">
+    <div class="marquee-track gap-3 pr-3">
+      <span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy">IBM DataStage</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy">Teradata</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy">Python</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy">SQL</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy">Cloud Engineering</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy">QA Automation</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy">Medical Coding</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy">Revenue Cycle Management</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy">HIM</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy">CDI</span>
+      <span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy" aria-hidden="true">IBM DataStage</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy" aria-hidden="true">Teradata</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy" aria-hidden="true">Python</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy" aria-hidden="true">SQL</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy" aria-hidden="true">Cloud Engineering</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy" aria-hidden="true">QA Automation</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy" aria-hidden="true">Medical Coding</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy" aria-hidden="true">Revenue Cycle Management</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy" aria-hidden="true">HIM</span><span class="whitespace-nowrap rounded-full bg-white shadow-soft px-5 py-2.5 text-sm font-bold text-navy" aria-hidden="true">CDI</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="pt-14 pb-20 md:pt-16 md:pb-28 bg-slate-50">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Services</p>
+      <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">Staffing and delivery, built around your hiring needs</h2>
+      <p class="mt-4 text-lg text-slate-600">Whether you need one specialist this week or a team for a multi-month program, we match the engagement model to your project.</p>
+    </div>
+    <div class="mt-12 grid md:grid-cols-3 gap-7">
+      <article id="service-it" class="reveal group bg-white rounded-3xl shadow-soft hover:shadow-lift transition overflow-hidden flex flex-col">
+        <div class="h-44 img-fallback relative"><img loading="lazy" src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=70" alt="Software developers working together at their desks" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()"></div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="text-xl font-extrabold text-navy">IT Staffing</h3>
+          <p class="mt-2 text-slate-600">Contract, contract-to-hire and direct-hire technology professionals.</p>
+          <ul class="mt-5 space-y-2.5 text-sm text-slate-700 flex-1">
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Data engineers and ETL developers</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>IBM DataStage and Teradata specialists</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>SQL and Python developers</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Cloud engineers and analysts</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>QA and test automation engineers</li>
+          </ul>
+          <a href="#contact" data-role="employer" class="mt-6 inline-flex items-center font-bold text-teal hover:text-teal-600">Learn more <span class="ml-1 transition group-hover:translate-x-1" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+
+      <article id="service-healthcare" class="reveal group bg-white rounded-3xl shadow-soft hover:shadow-lift transition overflow-hidden flex flex-col">
+        <div class="h-44 img-fallback relative"><img loading="lazy" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=70" alt="Healthcare professional reviewing patient information" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()"></div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="text-xl font-extrabold text-navy">Healthcare Staffing &amp; Medical Coding</h3>
+          <p class="mt-2 text-slate-600">Certified revenue cycle and health information professionals.</p>
+          <ul class="mt-5 space-y-2.5 text-sm text-slate-700 flex-1">
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Certified medical coders</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Revenue cycle management (RCM) staff</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>HIM professionals</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Clinical documentation improvement (CDI)</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Support for hospitals, health systems and RCM firms</li>
+          </ul>
+          <a href="#contact" data-role="employer" class="mt-6 inline-flex items-center font-bold text-teal hover:text-teal-600">Learn more <span class="ml-1 transition group-hover:translate-x-1" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+
+      <article id="service-solutions" class="reveal group bg-white rounded-3xl shadow-soft hover:shadow-lift transition overflow-hidden flex flex-col">
+        <div class="h-44 img-fallback relative"><img loading="lazy" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=70" alt="Project team in a planning meeting" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()"></div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="text-xl font-extrabold text-navy">IT Solutions</h3>
+          <p class="mt-2 text-slate-600">Project-based support when you need outcomes, not just headcount.</p>
+          <ul class="mt-5 space-y-2.5 text-sm text-slate-700 flex-1">
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Data integration and ETL projects</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Data warehouse support and migration</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Application development and enhancement</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Testing and quality assurance</li>
+            <li class="flex gap-2.5"><svg class="w-5 h-5 text-teal shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Ongoing production support</li>
+          </ul>
+          <a href="#contact" data-role="employer" class="mt-6 inline-flex items-center font-bold text-teal hover:text-teal-600">Learn more <span class="ml-1 transition group-hover:translate-x-1" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries" class="py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Industries we serve</p>
+      <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">Talent that understands your domain</h2>
+    </div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="reveal rounded-2xl border border-slate-200 p-7 hover:border-teal hover:shadow-soft transition">
+        <span class="grid place-items-center w-12 h-12 rounded-xl bg-teal-50 text-teal"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-9-9.2C1.7 8.4 3.6 5 7 5c2 0 3.2 1 5 3 1.8-2 3-3 5-3 3.4 0 5.3 3.4 4 6.8C19 16.600 12 21 12 21z"/></svg></span>
+        <h3 class="mt-5 text-lg font-extrabold text-navy">Healthcare &amp; RCM</h3>
+        <p class="mt-2 text-sm text-slate-600">Hospitals, health systems and revenue cycle companies.</p>
+      </div>
+      <div class="reveal rounded-2xl border border-slate-200 p-7 hover:border-teal hover:shadow-soft transition">
+        <span class="grid place-items-center w-12 h-12 rounded-xl bg-teal-50 text-teal"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
+        <h3 class="mt-5 text-lg font-extrabold text-navy">Information Technology</h3>
+        <p class="mt-2 text-sm text-slate-600">Technology companies, IT prime vendors and consultancies.</p>
+      </div>
+      <div class="reveal rounded-2xl border border-slate-200 p-7 hover:border-teal hover:shadow-soft transition">
+        <span class="grid place-items-center w-12 h-12 rounded-xl bg-teal-50 text-teal"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6M5 10v8M9 10v8M15 10v8M19 10v8M3 20h18"/></svg></span>
+        <h3 class="mt-5 text-lg font-extrabold text-navy">Banking &amp; Financial Services</h3>
+        <p class="mt-2 text-sm text-slate-600">Data, reporting and application roles for regulated environments.</p>
+      </div>
+      <div class="reveal rounded-2xl border border-slate-200 p-7 hover:border-teal hover:shadow-soft transition">
+        <span class="grid place-items-center w-12 h-12 rounded-xl bg-teal-50 text-teal"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h13l-1.500 8H8L6 4H3M9 20a1 1 0 1 0 0-.01M17 20a1 1 0 1 0 0-.01"/></svg></span>
+        <h3 class="mt-5 text-lg font-extrabold text-navy">Retail &amp; E-commerce</h3>
+        <p class="mt-2 text-sm text-slate-600">Data and platform talent for fast-moving commerce teams.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY AMS -->
+<section id="why" class="py-20 md:py-28 bg-slate-50">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal relative rounded-3xl overflow-hidden shadow-lift aspect-[4/3] img-fallback">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=70" alt="Business professionals meeting to discuss a hiring plan" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+    </div>
+    <div class="reveal">
+      <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Why AMS</p>
+      <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">A staffing partner that makes hiring easier</h2>
+      <dl class="mt-8 grid sm:grid-cols-2 gap-4">
+        <div class="flex gap-4 rounded-2xl bg-white border border-slate-100 p-5 shadow-soft hover:shadow-lift transition"><span class="mt-0.5 grid place-items-center w-9 h-9 shrink-0 rounded-lg bg-teal-50 text-teal"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><dt class="font-extrabold text-navy">Single point of contact</dt><dd class="text-slate-600 text-sm mt-1">One accountable person who knows your requirements and responds quickly.</dd></div></div>
+        <div class="flex gap-4 rounded-2xl bg-white border border-slate-100 p-5 shadow-soft hover:shadow-lift transition"><span class="mt-0.5 grid place-items-center w-9 h-9 shrink-0 rounded-lg bg-teal-50 text-teal"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><dt class="font-extrabold text-navy">Pre-vetted candidates</dt><dd class="text-slate-600 text-sm mt-1">Every profile is screened for skills, experience and credentials before submission.</dd></div></div>
+        <div class="flex gap-4 rounded-2xl bg-white border border-slate-100 p-5 shadow-soft hover:shadow-lift transition"><span class="mt-0.5 grid place-items-center w-9 h-9 shrink-0 rounded-lg bg-teal-50 text-teal"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><dt class="font-extrabold text-navy">Fast turnaround</dt><dd class="text-slate-600 text-sm mt-1">An active candidate network lets us respond to urgent requirements promptly.</dd></div></div>
+        <div class="flex gap-4 rounded-2xl bg-white border border-slate-100 p-5 shadow-soft hover:shadow-lift transition"><span class="mt-0.5 grid place-items-center w-9 h-9 shrink-0 rounded-lg bg-teal-50 text-teal"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><dt class="font-extrabold text-navy">Compliance first</dt><dd class="text-slate-600 text-sm mt-1">Background checks and I-9/E-Verify processes where applicable.</dd></div></div>
+        <div class="flex gap-4 sm:col-span-2 rounded-2xl bg-white border border-slate-100 p-5 shadow-soft hover:shadow-lift transition"><span class="mt-0.5 grid place-items-center w-9 h-9 shrink-0 rounded-lg bg-teal-50 text-teal"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><dt class="font-extrabold text-navy">Flexible engagement models</dt><dd class="text-slate-600 text-sm mt-1">Contract, contract-to-hire or direct hire, whichever fits your budget and timeline.</dd></div></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 md:py-28">
+  <div class="mx-auto max-w-4xl px-5 sm:px-8 text-center reveal">
+    <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">About AMS</p>
+    <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">Connecting employers with talent they can trust</h2>
+    <p class="mt-6 text-lg text-slate-600 leading-relaxed">AMS Infosystems LLC is a US-based staffing and IT solutions firm connecting employers across the country with vetted IT and healthcare professionals. We focus on doing a few things well: understanding your requirement, presenting qualified people, and supporting both sides throughout the engagement.</p>
+    <p class="mt-5 text-slate-700 font-semibold">Led by <span class="text-navy">Shobita Gummala</span></p>
+    <div class="mt-10 grid sm:grid-cols-3 gap-4 text-left">
+      <div class="rounded-2xl bg-slate-50 p-6 border border-slate-100"><p class="font-extrabold text-navy">Vetted talent</p><p class="mt-1 text-sm text-slate-600">Skills, experience and credentials checked before submission.</p></div>
+      <div class="rounded-2xl bg-slate-50 p-6 border border-slate-100"><p class="font-extrabold text-navy">Clear communication</p><p class="mt-1 text-sm text-slate-600">Honest timelines and one contact who knows your requirement.</p></div>
+      <div class="rounded-2xl bg-slate-50 p-6 border border-slate-100"><p class="font-extrabold text-navy">Compliance minded</p><p class="mt-1 text-sm text-slate-600">Background checks and I-9/E-Verify where applicable.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMITMENTS (replaces testimonials until real quotes exist) -->
+<section id="commitments" class="py-20 md:py-24 bg-slate-50">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Our commitments</p>
+      <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">What you can expect when you work with us</h2>
+    </div>
+    <div class="mt-10 grid md:grid-cols-2 gap-7">
+      <figure class="reveal bg-white rounded-3xl p-9 shadow-soft">
+        <svg class="w-9 h-9 text-teal" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 7H5v6h3c0 2-1 3-3 3v2c3 0 5-2 5-5V7zm9 0h-4v6h3c0 2-1 3-3 3v2c3 0 5-2 5-5V7z"/></svg>
+        <blockquote class="mt-4 text-xl font-bold text-navy leading-snug">Candidates presented to you are screened, qualified and ready to interview.</blockquote>
+        <figcaption class="mt-5 text-sm text-slate-500">Our shortlist promise</figcaption>
+      </figure>
+      <figure class="reveal bg-white rounded-3xl p-9 shadow-soft">
+        <svg class="w-9 h-9 text-teal" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 7H5v6h3c0 2-1 3-3 3v2c3 0 5-2 5-5V7zm9 0h-4v6h3c0 2-1 3-3 3v2c3 0 5-2 5-5V7z"/></svg>
+        <blockquote class="mt-4 text-xl font-bold text-navy leading-snug">Clear communication, honest timelines and a single contact from first call to project close.</blockquote>
+        <figcaption class="mt-5 text-sm text-slate-500">Our service promise</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="px-5 sm:px-8 pb-6">
+  <div class="reveal hero-bg relative overflow-hidden mx-auto max-w-7xl rounded-[2rem] px-8 py-14 md:px-16 md:py-16 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-8 shadow-lift">
+    <div class="grid-dots absolute inset-0 opacity-50" aria-hidden="true"></div>
+    <div class="relative max-w-xl">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Ready to <span class="text-grad">fill your next role?</span></h2>
+      <p class="mt-3 text-slate-300">Tell us what you need. We will respond with next steps and a clear plan.</p>
+    </div>
+    <div class="relative flex flex-col sm:flex-row gap-3 shrink-0">
+      <a href="#contact" data-role="employer" class="shine inline-flex justify-center rounded-full bg-white text-navy font-bold px-8 py-4 hover:bg-sky-50 transition">Request Talent</a>
+      <a href="mailto:info@amsinfosystems.com" class="glass inline-flex justify-center rounded-full font-bold px-8 py-4 hover:bg-white/25 transition">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-5 gap-12">
+    <div class="lg:col-span-2 reveal">
+      <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Contact us</p>
+      <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">Tell us what you need</h2>
+      <p class="mt-4 text-slate-600">Share your requirement and we will respond with next steps.</p>
+      <ul class="mt-8 space-y-5 text-sm">
+        <li class="flex gap-4"><span class="grid place-items-center w-11 h-11 shrink-0 rounded-xl bg-teal-50 text-teal"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><span class="block font-extrabold text-navy">Email</span><a class="text-slate-600 hover:text-teal" href="mailto:info@amsinfosystems.com">info@amsinfosystems.com</a></span></li>
+        <li class="flex gap-4"><span class="grid place-items-center w-11 h-11 shrink-0 rounded-xl bg-teal-50 text-teal"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/></svg></span><span><span class="block font-extrabold text-navy">Location</span><span class="text-slate-600">United States</span></span></li>
+        <li class="flex gap-4"><span class="grid place-items-center w-11 h-11 shrink-0 rounded-xl bg-teal-50 text-teal"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><span class="block font-extrabold text-navy">Business hours</span><span class="text-slate-600">Mon–Fri, 9am–6pm CT</span></span></li>
+      </ul>
+    </div>
+
+    <div class="lg:col-span-3 reveal">
+      <form id="contactForm" novalidate class="bg-white rounded-3xl shadow-lift ring-1 ring-slate-100 p-7 sm:p-10" method="post">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div><label for="name" class="block text-sm font-bold text-navy mb-1.5">Full name *</label><input id="name" name="name" class="field" autocomplete="name" required><p class="err hidden mt-1 text-xs text-red-600" role="alert"></p></div>
+          <div><label for="email" class="block text-sm font-bold text-navy mb-1.5">Work email *</label><input id="email" name="email" type="email" class="field" autocomplete="email" required><p class="err hidden mt-1 text-xs text-red-600" role="alert"></p></div>
+          <div><label for="phone" class="block text-sm font-bold text-navy mb-1.5">Phone</label><input id="phone" name="phone" type="tel" class="field" autocomplete="tel"><p class="err hidden mt-1 text-xs text-red-600" role="alert"></p></div>
+          <div><label for="company" class="block text-sm font-bold text-navy mb-1.5">Company</label><input id="company" name="company" class="field" autocomplete="organization"></div>
+        </div>
+        <input type="hidden" name="role" value="Employer">
+        <div class="mt-5"><label for="message" class="block text-sm font-bold text-navy mb-1.5">Message *</label><textarea id="message" name="message" rows="5" class="field" placeholder="Role, skills, location, start date, engagement type..." required></textarea><p class="err hidden mt-1 text-xs text-red-600" role="alert"></p></div>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+        <button type="submit" id="submitBtn" class="mt-7 w-full shine rounded-full bg-gradient-to-r from-teal to-sky-500 hover:brightness-110 text-white font-bold px-7 py-4 shadow-soft transition">Send Message</button>
+        <div id="formStatus" class="hidden mt-5 rounded-xl bg-teal-50 text-teal-600 border border-teal/30 px-5 py-4 text-sm font-semibold" role="status" aria-live="polite"></div>
+        <p class="mt-4 text-xs text-slate-500">We respect your privacy and use your details only to respond to your inquiry.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="hero-bg text-slate-300 mt-10">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-3">
+        <svg class="w-11 h-11" aria-hidden="true"><use href="#ams-logo"/></svg>
+        <p class="leading-none text-white"><span class="block text-xl font-extrabold tracking-tight">AMS</span><span class="block mt-1 text-[10px] font-bold uppercase tracking-[.22em] opacity-80">Infosystems</span></p>
+      </div>
+      <p class="mt-3 text-sm leading-relaxed">IT and healthcare staffing and solutions for employers across the USA.</p>
+    </div>
+    <nav aria-label="Quick links">
+      <h2 class="text-sm font-extrabold text-white uppercase tracking-wider">Quick links</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a class="hover:text-white" href="#home">Home</a></li><li><a class="hover:text-white" href="#services">Services</a></li><li><a class="hover:text-white" href="#industries">Industries</a></li><li><a class="hover:text-white" href="#about">About</a></li><li><a class="hover:text-white" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2 class="text-sm font-extrabold text-white uppercase tracking-wider">Services</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a class="hover:text-white" href="#service-it">IT Staffing</a></li>
+        <li><a class="hover:text-white" href="#service-healthcare">Healthcare Staffing &amp; Medical Coding</a></li>
+        <li><a class="hover:text-white" href="#service-solutions">IT Solutions</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-sm font-extrabold text-white uppercase tracking-wider">Contact</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        <li><a class="hover:text-white" href="mailto:info@amsinfosystems.com">info@amsinfosystems.com</a></li>
+        <li>United States</li>
+        <li>Mon–Fri, 9am–6pm CT</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <p class="mx-auto max-w-7xl px-5 sm:px-8 py-6 text-xs text-slate-400">&copy; 2026 AMS Infosystems LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Set to your Formspree endpoint (e.g. "https://formspree.io/f/xxxxxxx"). While empty, the form opens a pre-filled email to info@amsinfosystems.com.
+  var FORM_ENDPOINT = "";
+  var TO_EMAIL = "info@amsinfosystems.com";
+
+  var header = document.getElementById('header');
+  var logoText = document.getElementById('logoText');
+  var navA = document.querySelectorAll('.nav-a');
+  var menuBtn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  var iconOpen = document.getElementById('iconOpen');
+  var iconClose = document.getElementById('iconClose');
+
+  // Sticky header: transparent over hero, frosted white after scroll
+  function onScroll() {
+    var s = window.scrollY > 24;
+    header.classList.toggle('bg-white/85', s);
+    header.classList.toggle('backdrop-blur-lg', s);
+    header.classList.toggle('shadow-soft', s); header.classList.toggle('sm:mx-6', s); header.classList.toggle('sm:mt-3', s); header.classList.toggle('sm:rounded-2xl', s); header.classList.toggle('ring-1', s); header.classList.toggle('ring-slate-200/70', s);
+    logoText.classList.toggle('text-white', !s);
+    logoText.classList.toggle('text-navy', s);
+    menuBtn.classList.toggle('text-white', !s);
+    menuBtn.classList.toggle('text-navy', s);
+    navA.forEach(function (a) {
+      a.classList.toggle('text-white/90', !s); a.classList.toggle('hover:bg-white/10', !s);
+      a.classList.toggle('text-navy', s); a.classList.toggle('hover:bg-teal-50', s);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Mobile menu
+  function setMenu(open) {
+    menu.classList.toggle('hidden', !open);
+    iconOpen.classList.toggle('hidden', open);
+    iconClose.classList.toggle('hidden', !open);
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (open) { header.classList.add('bg-navy'); } else { header.classList.remove('bg-navy'); }
+  }
+  menuBtn.addEventListener('click', function () { setMenu(menu.classList.contains('hidden')); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.classList.contains('hidden')) { setMenu(false); menuBtn.focus(); } });
+
+  // Scroll-in animations
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  } else { els.forEach(function (el) { el.classList.add('in'); }); }
+
+  // Form
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+  function setErr(input, msg) {
+    var p = input.parentElement.querySelector('.err');
+    input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    if (p) { p.textContent = msg || ''; p.classList.toggle('hidden', !msg); }
+    return !msg;
+  }
+  function validate() {
+    var f = form.elements, ok = true, first = null;
+    function check(el, msg) { var good = setErr(el, msg); if (!good && !first) first = el; ok = ok && good; }
+    check(f.name, f.name.value.trim().length < 2 ? 'Please enter your name.' : '');
+    check(f.email, /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.email.value.trim()) ? '' : 'Please enter a valid email address.');
+    var ph = f.phone.value.trim();
+    check(f.phone, ph && ph.replace(/\D/g, '').length < 7 ? 'Please enter a valid phone number.' : '');
+    check(f.message, f.message.value.trim().length < 10 ? 'Please tell us a little more (at least 10 characters).' : '');
+    if (first) first.focus();
+    return ok;
+  }
+  form.addEventListener('input', function (e) { if (e.target.getAttribute && e.target.getAttribute('aria-invalid') === 'true') setErr(e.target, ''); });
+
+  function done(msg) {
+    status.textContent = msg; status.classList.remove('hidden');
+    form.reset(); form.querySelectorAll('[aria-invalid]').forEach(function (i) { i.removeAttribute('aria-invalid'); });
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    status.classList.add('hidden');
+    if (!validate()) return;
+    var f = form.elements;
+    if (f._gotcha.value) return; // bot
+    var data = { name: f.name.value.trim(), email: f.email.value.trim(), phone: f.phone.value.trim(), company: f.company.value.trim(), role: form.querySelector('input[name="role"]').value, message: f.message.value.trim() };
+    var btn = document.getElementById('submitBtn');
+    if (FORM_ENDPOINT) {
+      btn.disabled = true; btn.textContent = 'Sending...';
+      fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+        .then(function (r) { if (!r.ok) throw new Error(); done('Thank you, ' + data.name.split(' ')[0] + '. Your message has been sent and we will be in touch shortly.'); })
+        .catch(function () { status.textContent = 'Sorry, something went wrong. Please email us directly at ' + TO_EMAIL + '.'; status.classList.remove('hidden'); })
+        .finally(function () { btn.disabled = false; btn.textContent = 'Send Message'; });
+    } else {
+      var body = 'Name: ' + data.name + '\nEmail: ' + data.email + '\nPhone: ' + data.phone + '\nCompany: ' + data.company + '\nI am: ' + data.role + '\n\n' + data.message;
+      window.location.href = 'mailto:' + TO_EMAIL + '?subject=' + encodeURIComponent('Website inquiry (' + data.role + ') - ' + data.name) + '&body=' + encodeURIComponent(body);
+      done('Thank you, ' + data.name.split(' ')[0] + '. Your email app should open with your message ready to send. If it does not, write to us at ' + TO_EMAIL + '.');
+    }
+  });
+})();
+</script>
+</body>
+</html>
