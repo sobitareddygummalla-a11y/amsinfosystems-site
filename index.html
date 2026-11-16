@@ -61,6 +61,17 @@ tailwind.config = {
   @media (prefers-reduced-motion: reduce) { .reveal { transition: none; opacity: 1; transform: none; } html { scroll-behavior: auto; } }
   section[id] { scroll-margin-top: 80px; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AMS Infosystems LLC",
+  "url": "https://amsinfosystems.com",
+  "email": "info@amsinfosystems.com",
+  "areaServed": "US",
+  "description": "IT and healthcare staffing and solutions for employers across the USA."
+}
+</script>
 </head>
 <body class="bg-white antialiased">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -93,7 +104,9 @@ tailwind.config = {
         <li><a class="nav-a px-3 py-2 rounded-lg" href="#home">Home</a></li>
         <li><a class="nav-a px-3 py-2 rounded-lg" href="#services">Services</a></li>
         <li><a class="nav-a px-3 py-2 rounded-lg" href="#industries">Industries</a></li>
+        <li><a class="nav-a px-3 py-2 rounded-lg" href="#process">Process</a></li>
         <li><a class="nav-a px-3 py-2 rounded-lg" href="#about">About</a></li>
+        <li><a class="nav-a px-3 py-2 rounded-lg" href="#careers">Careers</a></li>
         <li><a class="nav-a px-3 py-2 rounded-lg" href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -110,7 +123,9 @@ tailwind.config = {
       <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#home">Home</a></li>
       <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#services">Services</a></li>
       <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#industries">Industries</a></li>
+      <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#process">Process</a></li>
       <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#about">About</a></li>
+      <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#careers">Careers</a></li>
       <li><a class="block px-3 py-3 rounded-lg hover:bg-teal-50" href="#contact">Contact</a></li>
       <li class="pt-2"><a data-role="employer" class="block text-center rounded-xl bg-teal text-white font-bold px-5 py-3" href="#contact">Request Talent</a></li>
     </ul>
@@ -161,10 +176,10 @@ tailwind.config = {
 <!-- STATS STRIP -->
 <section aria-label="At a glance" class="relative z-10 -mt-16 md:-mt-24 px-5 sm:px-8 pb-12 bg-gradient-to-b from-transparent via-transparent to-slate-50">
   <div class="mx-auto max-w-7xl rounded-3xl bg-gradient-to-br from-teal to-navy-700 text-white shadow-lift px-8 py-9 grid grid-cols-2 lg:grid-cols-4 gap-y-7 gap-x-6 ring-1 ring-white/20">
-    <div class="text-center lg:text-left"><p class="text-3xl font-extrabold text-white">3</p><p class="mt-1 text-sm text-blue-100">Engagement models: contract, contract-to-hire, direct hire</p></div>
-    <div class="text-center lg:text-left"><p class="text-3xl font-extrabold text-white">2</p><p class="mt-1 text-sm text-blue-100">Practice areas: IT and healthcare, staffing and solutions</p></div>
-    <div class="text-center lg:text-left"><p class="text-3xl font-extrabold text-white">USA</p><p class="mt-1 text-sm text-blue-100">Nationwide client and candidate coverage</p></div>
-    <div class="text-center lg:text-left"><p class="text-3xl font-extrabold text-white">1</p><p class="mt-1 text-sm text-blue-100">Dedicated point of contact for every client</p></div>
+    <div class="flex items-center gap-3"><svg class="w-6 h-6 shrink-0 text-sky-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><p class="font-bold">Pre-vetted shortlists</p></div>
+    <div class="flex items-center gap-3"><svg class="w-6 h-6 shrink-0 text-sky-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><p class="font-bold">Single point of contact</p></div>
+    <div class="flex items-center gap-3"><svg class="w-6 h-6 shrink-0 text-sky-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><p class="font-bold">Contract, contract-to-hire &amp; direct hire</p></div>
+    <div class="flex items-center gap-3"><svg class="w-6 h-6 shrink-0 text-sky-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg><p class="font-bold">Nationwide coverage</p></div>
   </div>
 </section>
 
@@ -255,35 +270,68 @@ tailwind.config = {
   </div>
 </section>
 
+<!-- ROLES WE RECRUIT FOR -->
+<section id="roles" class="py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Roles we recruit for</p>
+      <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">Skill areas across IT and healthcare</h2>
+      <p class="mt-4 text-lg text-slate-600">These are the skill areas we recruit for. They are not a list of open positions. Tell us what you need and we will source it.</p>
+    </div>
+    <ul class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <li class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-soft font-extrabold text-navy">DataStage / ETL</li>
+      <li class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-soft font-extrabold text-navy">Teradata</li>
+      <li class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-soft font-extrabold text-navy">Python &amp; SQL</li>
+      <li class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-soft font-extrabold text-navy">Cloud &amp; QA</li>
+      <li class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-soft font-extrabold text-navy">Certified medical coding</li>
+      <li class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-soft font-extrabold text-navy">RCM</li>
+      <li class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-soft font-extrabold text-navy">HIM</li>
+      <li class="reveal rounded-2xl border border-slate-200 bg-white p-5 shadow-soft font-extrabold text-navy">CDI</li>
+    </ul>
+  </div>
+</section>
+
 <!-- INDUSTRIES -->
-<section id="industries" class="py-20 md:py-28">
+<section id="industries" class="py-20 md:py-28 bg-slate-50">
   <div class="mx-auto max-w-7xl px-5 sm:px-8">
     <div class="max-w-2xl reveal">
       <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Industries we serve</p>
       <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">Talent that understands your domain</h2>
     </div>
-    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="reveal rounded-2xl border border-slate-200 p-7 hover:border-teal hover:shadow-soft transition">
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="reveal rounded-2xl bg-white border border-slate-200 p-7 hover:border-teal hover:shadow-soft transition">
         <span class="grid place-items-center w-12 h-12 rounded-xl bg-teal-50 text-teal"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-9-9.2C1.7 8.4 3.6 5 7 5c2 0 3.2 1 5 3 1.8-2 3-3 5-3 3.4 0 5.3 3.4 4 6.8C19 16.600 12 21 12 21z"/></svg></span>
         <h3 class="mt-5 text-lg font-extrabold text-navy">Healthcare &amp; RCM</h3>
         <p class="mt-2 text-sm text-slate-600">Hospitals, health systems and revenue cycle companies.</p>
       </div>
-      <div class="reveal rounded-2xl border border-slate-200 p-7 hover:border-teal hover:shadow-soft transition">
+      <div class="reveal rounded-2xl bg-white border border-slate-200 p-7 hover:border-teal hover:shadow-soft transition">
         <span class="grid place-items-center w-12 h-12 rounded-xl bg-teal-50 text-teal"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>
         <h3 class="mt-5 text-lg font-extrabold text-navy">Information Technology</h3>
         <p class="mt-2 text-sm text-slate-600">Technology companies, IT prime vendors and consultancies.</p>
       </div>
-      <div class="reveal rounded-2xl border border-slate-200 p-7 hover:border-teal hover:shadow-soft transition">
-        <span class="grid place-items-center w-12 h-12 rounded-xl bg-teal-50 text-teal"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6M5 10v8M9 10v8M15 10v8M19 10v8M3 20h18"/></svg></span>
-        <h3 class="mt-5 text-lg font-extrabold text-navy">Banking &amp; Financial Services</h3>
-        <p class="mt-2 text-sm text-slate-600">Data, reporting and application roles for regulated environments.</p>
-      </div>
-      <div class="reveal rounded-2xl border border-slate-200 p-7 hover:border-teal hover:shadow-soft transition">
+      <div class="reveal rounded-2xl bg-white border border-slate-200 p-7 hover:border-teal hover:shadow-soft transition">
         <span class="grid place-items-center w-12 h-12 rounded-xl bg-teal-50 text-teal"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h13l-1.500 8H8L6 4H3M9 20a1 1 0 1 0 0-.01M17 20a1 1 0 1 0 0-.01"/></svg></span>
         <h3 class="mt-5 text-lg font-extrabold text-navy">Retail &amp; E-commerce</h3>
         <p class="mt-2 text-sm text-slate-600">Data and platform talent for fast-moving commerce teams.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="py-20 md:py-28 hero-bg text-white relative overflow-hidden">
+  <div class="grid-dots absolute inset-0 opacity-50" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="inline-block rounded-full bg-white/10 ring-1 ring-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#9CC7FF]">How it works</p>
+      <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] tracking-tight">A simple, transparent process</h2>
+    </div>
+    <ol class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <li class="reveal rounded-3xl glass p-8 hover:-translate-y-1.5 transition"><span class="text-4xl font-extrabold text-[#7DB4FF]">01</span><h3 class="mt-4 text-lg font-extrabold">Share your requirement</h3><p class="mt-2 text-sm text-slate-300">Tell us the role, skills, timeline and budget. We clarify the details so we search for the right profile.</p></li>
+      <li class="reveal rounded-3xl glass p-8 hover:-translate-y-1.5 transition"><span class="text-4xl font-extrabold text-[#7DB4FF]">02</span><h3 class="mt-4 text-lg font-extrabold">Get a vetted shortlist</h3><p class="mt-2 text-sm text-slate-300">We screen for skills, experience, credentials and availability, then send only qualified candidates.</p></li>
+      <li class="reveal rounded-3xl glass p-8 hover:-translate-y-1.5 transition"><span class="text-4xl font-extrabold text-[#7DB4FF]">03</span><h3 class="mt-4 text-lg font-extrabold">Interview &amp; select</h3><p class="mt-2 text-sm text-slate-300">We coordinate interviews and feedback so you can choose with confidence and move quickly.</p></li>
+      <li class="reveal rounded-3xl glass p-8 hover:-translate-y-1.5 transition"><span class="text-4xl font-extrabold text-[#7DB4FF]">04</span><h3 class="mt-4 text-lg font-extrabold">Onboard &amp; ongoing support</h3><p class="mt-2 text-sm text-slate-300">We handle onboarding paperwork and stay in touch throughout the engagement.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -307,22 +355,55 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-20 md:py-28">
-  <div class="mx-auto max-w-4xl px-5 sm:px-8 text-center reveal">
-    <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">About AMS</p>
-    <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">Connecting employers with talent they can trust</h2>
-    <p class="mt-6 text-lg text-slate-600 leading-relaxed">AMS Infosystems LLC is a US-based IT and healthcare staffing and solutions firm connecting employers across the country with vetted IT and healthcare professionals. We focus on doing a few things well: understanding your requirement, presenting qualified people, and supporting both sides throughout the engagement.</p>
-    <p class="mt-5 text-slate-700 font-semibold">Led by <span class="text-navy">Shobita Gummala</span></p>
-    <div class="mt-10 grid sm:grid-cols-3 gap-4 text-left">
-      <div class="rounded-2xl bg-slate-50 p-6 border border-slate-100"><p class="font-extrabold text-navy">Vetted talent</p><p class="mt-1 text-sm text-slate-600">Skills, experience and credentials checked before submission.</p></div>
-      <div class="rounded-2xl bg-slate-50 p-6 border border-slate-100"><p class="font-extrabold text-navy">Clear communication</p><p class="mt-1 text-sm text-slate-600">Honest timelines and one contact who knows your requirement.</p></div>
-      <div class="rounded-2xl bg-slate-50 p-6 border border-slate-100"><p class="font-extrabold text-navy">Compliance minded</p><p class="mt-1 text-sm text-slate-600">Background checks and I-9/E-Verify where applicable.</p></div>
+<!-- PARTNER -->
+<section id="partner" class="py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="reveal rounded-[2rem] bg-gradient-to-br from-teal-50 to-white border border-teal/20 p-9 sm:p-14 grid lg:grid-cols-5 gap-10 items-center shadow-soft">
+      <div class="lg:col-span-3">
+        <p class="inline-block rounded-full bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal shadow-soft">Partner with AMS</p>
+        <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">A reliable sub-vendor for prime vendors, MSPs and consultancies</h2>
+        <p class="mt-5 text-lg text-slate-600 leading-relaxed">AMS supplies vetted IT and healthcare professionals to prime vendors, managed service providers and consultancies that need dependable delivery capacity. We respond promptly, submit only qualified candidates, and keep compliance paperwork in order.</p>
+      </div>
+      <div class="lg:col-span-2 lg:text-right">
+        <a href="#contact" data-role="employer" class="shine inline-flex items-center rounded-full bg-gradient-to-r from-teal to-sky-500 hover:brightness-110 text-white font-bold px-8 py-4 shadow-soft transition">Discuss a partnership <span class="ml-2" aria-hidden="true">&rarr;</span></a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- COMMITMENTS (replaces testimonials until real quotes exist) -->
+<!-- ABOUT -->
+<section id="about" class="py-20 md:py-28 bg-slate-50">
+  <div class="mx-auto max-w-4xl px-5 sm:px-8 text-center reveal">
+    <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">About AMS</p>
+    <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">Connecting employers with talent they can trust</h2>
+    <p class="mt-6 text-lg text-slate-600 leading-relaxed">AMS Infosystems LLC is a US-based IT and healthcare staffing and solutions firm connecting employers across the country with vetted IT and healthcare professionals. We focus on doing a few things well: understanding your requirement, presenting qualified people, and supporting both sides throughout the engagement.</p>
+    <p class="mt-5 text-slate-700 font-semibold">Led by CEO <span class="text-navy">Sobita Gummalla</span>, with <span class="text-navy">Naveen Reddy</span> as account manager.</p>
+    <div class="mt-10 grid sm:grid-cols-3 gap-4 text-left">
+      <div class="rounded-2xl bg-white p-6 border border-slate-100 shadow-soft"><p class="font-extrabold text-navy">Vetted talent</p><p class="mt-1 text-sm text-slate-600">Skills, experience and credentials checked before submission.</p></div>
+      <div class="rounded-2xl bg-white p-6 border border-slate-100 shadow-soft"><p class="font-extrabold text-navy">Clear communication</p><p class="mt-1 text-sm text-slate-600">Honest timelines and one contact who knows your requirement.</p></div>
+      <div class="rounded-2xl bg-white p-6 border border-slate-100 shadow-soft"><p class="font-extrabold text-navy">Compliance minded</p><p class="mt-1 text-sm text-slate-600">Background checks and I-9/E-Verify where applicable.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS / JOB SEEKERS -->
+<section id="careers" class="py-20 md:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="reveal rounded-3xl bg-gradient-to-br from-navy to-navy-700 text-white overflow-hidden grid lg:grid-cols-2 shadow-lift">
+      <div class="p-9 sm:p-12 lg:p-14">
+        <p class="inline-block rounded-full bg-white/10 ring-1 ring-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#9CC7FF]">For job seekers</p>
+        <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] tracking-tight">Looking for your next contract role?</h2>
+        <p class="mt-5 text-slate-200 leading-relaxed text-lg">Send us your resume and we will contact you when a role matches your skills and preferences. We place DataStage/ETL, Teradata, Python, SQL, medical coding and RCM professionals.</p>
+        <a href="mailto:info@amsinfosystems.com?subject=Resume%20Submission&body=Hello%20AMS%20Infosystems%2C%0A%0APlease%20find%20my%20resume%20attached.%0A%0AName%3A%0APreferred%20role%3A%0AWork%20authorization%3A%0A" class="shine mt-9 inline-flex items-center rounded-full bg-gradient-to-r from-teal to-sky-500 hover:brightness-110 px-8 py-4 font-bold transition">Submit Resume</a>
+      </div>
+      <div class="relative min-h-[260px] img-fallback">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=70" alt="Confident professional smiling in a modern office" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMITMENTS -->
 <section id="commitments" class="py-20 md:py-24 bg-slate-50">
   <div class="mx-auto max-w-7xl px-5 sm:px-8">
     <div class="max-w-2xl reveal">
@@ -339,6 +420,28 @@ tailwind.config = {
         <svg class="w-9 h-9 text-teal" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 7H5v6h3c0 2-1 3-3 3v2c3 0 5-2 5-5V7zm9 0h-4v6h3c0 2-1 3-3 3v2c3 0 5-2 5-5V7z"/></svg>
         <blockquote class="mt-4 text-xl font-bold text-navy leading-snug">Clear communication, honest timelines and a single contact from first call to project close.</blockquote>
         <figcaption class="mt-5 text-sm text-slate-500">Our service promise</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS (placeholders) -->
+<section id="testimonials" class="py-20 md:py-24">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">Testimonials</p>
+      <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">What our clients say</h2>
+    </div>
+    <div class="mt-10 grid md:grid-cols-2 gap-7">
+      <figure class="reveal bg-white rounded-3xl p-9 shadow-soft border border-slate-100">
+        <svg class="w-9 h-9 text-teal" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 7H5v6h3c0 2-1 3-3 3v2c3 0 5-2 5-5V7zm9 0h-4v6h3c0 2-1 3-3 3v2c3 0 5-2 5-5V7z"/></svg>
+        <blockquote class="mt-4 text-xl font-bold text-slate-500 leading-snug">[Testimonial placeholder — replace with a real client quote]</blockquote>
+        <figcaption class="mt-5 text-sm text-slate-400">[Client name and title — placeholder]</figcaption>
+      </figure>
+      <figure class="reveal bg-white rounded-3xl p-9 shadow-soft border border-slate-100">
+        <svg class="w-9 h-9 text-teal" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 7H5v6h3c0 2-1 3-3 3v2c3 0 5-2 5-5V7zm9 0h-4v6h3c0 2-1 3-3 3v2c3 0 5-2 5-5V7z"/></svg>
+        <blockquote class="mt-4 text-xl font-bold text-slate-500 leading-snug">[Testimonial placeholder — replace with a real client quote]</blockquote>
+        <figcaption class="mt-5 text-sm text-slate-400">[Client name and title — placeholder]</figcaption>
       </figure>
     </div>
   </div>
@@ -368,7 +471,6 @@ tailwind.config = {
       <p class="mt-4 text-slate-600">Share your requirement and we will respond with next steps.</p>
       <ul class="mt-8 space-y-5 text-sm">
         <li class="flex gap-4"><span class="grid place-items-center w-11 h-11 shrink-0 rounded-xl bg-teal-50 text-teal"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><span class="block font-extrabold text-navy">Email</span><a class="text-slate-600 hover:text-teal" href="mailto:info@amsinfosystems.com">info@amsinfosystems.com</a></span></li>
-        <li class="flex gap-4"><span class="grid place-items-center w-11 h-11 shrink-0 rounded-xl bg-teal-50 text-teal"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/></svg></span><span><span class="block font-extrabold text-navy">Location</span><span class="text-slate-600">United States</span></span></li>
         <li class="flex gap-4"><span class="grid place-items-center w-11 h-11 shrink-0 rounded-xl bg-teal-50 text-teal"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><span class="block font-extrabold text-navy">Business hours</span><span class="text-slate-600">Mon–Fri, 9am–6pm CT</span></span></li>
       </ul>
     </div>
@@ -381,7 +483,13 @@ tailwind.config = {
           <div><label for="phone" class="block text-sm font-bold text-navy mb-1.5">Phone</label><input id="phone" name="phone" type="tel" class="field" autocomplete="tel"><p class="err hidden mt-1 text-xs text-red-600" role="alert"></p></div>
           <div><label for="company" class="block text-sm font-bold text-navy mb-1.5">Company</label><input id="company" name="company" class="field" autocomplete="organization"></div>
         </div>
-        <input type="hidden" name="role" value="Employer">
+        <fieldset class="mt-5">
+          <legend class="block text-sm font-bold text-navy mb-2">I am *</legend>
+          <div class="flex gap-3">
+            <label class="flex-1 cursor-pointer"><input type="radio" name="role" value="Employer" class="peer sr-only" checked><span class="block text-center rounded-xl border border-slate-300 px-4 py-3 text-sm font-bold text-slate-600 peer-checked:bg-navy peer-checked:text-white peer-checked:border-navy peer-focus-visible:ring-2 peer-focus-visible:ring-teal transition">Employer</span></label>
+            <label class="flex-1 cursor-pointer"><input type="radio" name="role" value="Job Seeker" class="peer sr-only"><span class="block text-center rounded-xl border border-slate-300 px-4 py-3 text-sm font-bold text-slate-600 peer-checked:bg-navy peer-checked:text-white peer-checked:border-navy peer-focus-visible:ring-2 peer-focus-visible:ring-teal transition">Job Seeker</span></label>
+          </div>
+        </fieldset>
         <div class="mt-5"><label for="message" class="block text-sm font-bold text-navy mb-1.5">Message *</label><textarea id="message" name="message" rows="5" class="field" placeholder="Role, skills, location, start date, engagement type..." required></textarea><p class="err hidden mt-1 text-xs text-red-600" role="alert"></p></div>
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
         <button type="submit" id="submitBtn" class="mt-7 w-full shine rounded-full bg-gradient-to-r from-teal to-sky-500 hover:brightness-110 text-white font-bold px-7 py-4 shadow-soft transition">Send Message</button>
@@ -406,7 +514,7 @@ tailwind.config = {
     <nav aria-label="Quick links">
       <h2 class="text-sm font-extrabold text-white uppercase tracking-wider">Quick links</h2>
       <ul class="mt-4 space-y-2 text-sm">
-        <li><a class="hover:text-white" href="#home">Home</a></li><li><a class="hover:text-white" href="#services">Services</a></li><li><a class="hover:text-white" href="#industries">Industries</a></li><li><a class="hover:text-white" href="#about">About</a></li><li><a class="hover:text-white" href="#contact">Contact</a></li>
+        <li><a class="hover:text-white" href="#home">Home</a></li><li><a class="hover:text-white" href="#services">Services</a></li><li><a class="hover:text-white" href="#industries">Industries</a></li><li><a class="hover:text-white" href="#process">Process</a></li><li><a class="hover:text-white" href="#about">About</a></li><li><a class="hover:text-white" href="#careers">Careers</a></li><li><a class="hover:text-white" href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div>
@@ -422,20 +530,23 @@ tailwind.config = {
       <h2 class="text-sm font-extrabold text-white uppercase tracking-wider">Contact</h2>
       <ul class="mt-4 space-y-2 text-sm">
         <li><a class="hover:text-white" href="mailto:info@amsinfosystems.com">info@amsinfosystems.com</a></li>
-        <li>United States</li>
         <li>Mon–Fri, 9am–6pm CT</li>
       </ul>
     </div>
   </div>
   <div class="border-t border-white/10">
-    <p class="mx-auto max-w-7xl px-5 sm:px-8 py-6 text-xs text-slate-400">&copy; 2026 AMS Infosystems LLC. All rights reserved.</p>
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-slate-400">
+      <p>&copy; 2026 AMS Infosystems LLC. All rights reserved.</p>
+      <p>AMS Infosystems LLC is an equal opportunity employer.</p>
+      <a href="#" class="hover:text-white">[Privacy Policy &mdash; placeholder]</a>
+    </div>
   </div>
 </footer>
 
 <script>
 (function () {
   // Set to your Formspree endpoint (e.g. "https://formspree.io/f/xxxxxxx"). While empty, the form opens a pre-filled email to info@amsinfosystems.com.
-  var FORM_ENDPOINT = "";
+  var FORM_ENDPOINT = ""; // [Formspree endpoint — replace with your own]
   var TO_EMAIL = "info@amsinfosystems.com";
 
   var header = document.getElementById('header');
@@ -485,6 +596,11 @@ tailwind.config = {
     els.forEach(function (el) { io.observe(el); });
   } else { els.forEach(function (el) { el.classList.add('in'); }); }
 
+  // "Request Talent" and partnership CTAs preselect Employer
+  document.querySelectorAll('[data-role="employer"]').forEach(function (a) {
+    a.addEventListener('click', function () { var r = document.querySelector('input[name="role"][value="Employer"]'); if (r) r.checked = true; });
+  });
+
   // Form
   var form = document.getElementById('contactForm');
   var status = document.getElementById('formStatus');
@@ -517,7 +633,7 @@ tailwind.config = {
     if (!validate()) return;
     var f = form.elements;
     if (f._gotcha.value) return; // bot
-    var data = { name: f.name.value.trim(), email: f.email.value.trim(), phone: f.phone.value.trim(), company: f.company.value.trim(), role: form.querySelector('input[name="role"]').value, message: f.message.value.trim() };
+    var data = { name: f.name.value.trim(), email: f.email.value.trim(), phone: f.phone.value.trim(), company: f.company.value.trim(), role: form.querySelector('input[name="role"]:checked').value, message: f.message.value.trim() };
     var btn = document.getElementById('submitBtn');
     if (FORM_ENDPOINT) {
       btn.disabled = true; btn.textContent = 'Sending...';
