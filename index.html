@@ -377,7 +377,6 @@ tailwind.config = {
     <p class="inline-block rounded-full bg-teal-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal">About AMS</p>
     <h2 class="mt-4 text-3xl md:text-5xl font-extrabold leading-[1.1] text-navy tracking-tight">Connecting employers with talent they can trust</h2>
     <p class="mt-6 text-lg text-slate-600 leading-relaxed">AMS Infosystems LLC is a US-based IT and healthcare staffing and solutions firm connecting employers across the country with vetted IT and healthcare professionals. We focus on doing a few things well: understanding your requirement, presenting qualified people, and supporting both sides throughout the engagement.</p>
-    <p class="mt-5 text-slate-700 font-semibold">Led by CEO <span class="text-navy">Sobita Gummalla</span>, with <span class="text-navy">Naveen Reddy</span> as account manager.</p>
     <div class="mt-10 grid sm:grid-cols-3 gap-4 text-left">
       <div class="rounded-2xl bg-white p-6 border border-slate-100 shadow-soft"><p class="font-extrabold text-navy">Vetted talent</p><p class="mt-1 text-sm text-slate-600">Skills, experience and credentials checked before submission.</p></div>
       <div class="rounded-2xl bg-white p-6 border border-slate-100 shadow-soft"><p class="font-extrabold text-navy">Clear communication</p><p class="mt-1 text-sm text-slate-600">Honest timelines and one contact who knows your requirement.</p></div>
@@ -545,8 +544,8 @@ tailwind.config = {
 
 <script>
 (function () {
-  // Set to your Formspree endpoint (e.g. "https://formspree.io/f/xxxxxxx"). While empty, the form opens a pre-filled email to info@amsinfosystems.com.
-  var FORM_ENDPOINT = ""; // [Formspree endpoint — replace with your own]
+  // Form submissions are emailed to info@amsinfosystems.com through FormSubmit (formsubmit.co). If sending fails or this is left empty, the form opens a pre-filled email instead. You can swap in a Formspree endpoint here.
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/info@amsinfosystems.com";
   var TO_EMAIL = "info@amsinfosystems.com";
 
   var header = document.getElementById('header');
@@ -635,16 +634,22 @@ tailwind.config = {
     if (f._gotcha.value) return; // bot
     var data = { name: f.name.value.trim(), email: f.email.value.trim(), phone: f.phone.value.trim(), company: f.company.value.trim(), role: form.querySelector('input[name="role"]:checked').value, message: f.message.value.trim() };
     var btn = document.getElementById('submitBtn');
-    if (FORM_ENDPOINT) {
-      btn.disabled = true; btn.textContent = 'Sending...';
-      fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
-        .then(function (r) { if (!r.ok) throw new Error(); done('Thank you, ' + data.name.split(' ')[0] + '. Your message has been sent and we will be in touch shortly.'); })
-        .catch(function () { status.textContent = 'Sorry, something went wrong. Please email us directly at ' + TO_EMAIL + '.'; status.classList.remove('hidden'); })
-        .finally(function () { btn.disabled = false; btn.textContent = 'Send Message'; });
-    } else {
+    function viaMailto() {
       var body = 'Name: ' + data.name + '\nEmail: ' + data.email + '\nPhone: ' + data.phone + '\nCompany: ' + data.company + '\nI am: ' + data.role + '\n\n' + data.message;
       window.location.href = 'mailto:' + TO_EMAIL + '?subject=' + encodeURIComponent('Website inquiry (' + data.role + ') - ' + data.name) + '&body=' + encodeURIComponent(body);
       done('Thank you, ' + data.name.split(' ')[0] + '. Your email app should open with your message ready to send. If it does not, write to us at ' + TO_EMAIL + '.');
+    }
+    if (FORM_ENDPOINT) {
+      btn.disabled = true; btn.textContent = 'Sending...';
+      data._subject = 'Website inquiry (' + data.role + ') - ' + data.name;
+      data._replyto = data.email;
+      fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+        .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+        .then(function (j) { if (j && (j.success === false || j.success === 'false')) throw new Error(); done('Thank you, ' + data.name.split(' ')[0] + '. Your message has been sent and we will be in touch shortly.'); })
+        .catch(function () { viaMailto(); })
+        .finally(function () { btn.disabled = false; btn.textContent = 'Send Message'; });
+    } else {
+      viaMailto();
     }
   });
 })();
